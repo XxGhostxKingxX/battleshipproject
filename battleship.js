@@ -23,6 +23,8 @@ var letterConversion = {
 
 var letterArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
 
+var userInput = $("#myInputBox").val();
+
 // makes the grid columns and rows
 for (i = 0; i < cols; i++) {
 	for (j = 0; j < rows; j++) {
@@ -63,6 +65,6 @@ var gameBoard = [
 
 function fireTorpedo() {
 
-	// Your game logic will go here!
-
+	var userInput = $("#myInputBox").val();
+  var row = userInput.substring(0,1);
 }
