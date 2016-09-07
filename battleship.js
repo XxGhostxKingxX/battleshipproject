@@ -62,9 +62,25 @@ var gameBoard = [
 				[1,0,0,1,0,0,0,0,0,0],
 				[1,0,0,0,0,0,0,0,0,0]
 				]
+ var x;
+ var column;
+ var torpedo;
+ var first;
+ var second;
+ var converted;
+ var hitHolder = 0;
 
-function fireTorpedo() {
+	function fireTorpedo() {
+		  torpedo = document.getElementById("fireInput").value;
+			  x = torpedo.substring(0, 1);
+			  row = letterConversion[x];
+			  column = torpedo.substring(1, 3);
 
-	var userInput = $("#myInputBox").val();
-  var row = userInput.substring(0,1);
-}
+	if (gameBoard[row][column - 1] == 1){
+			 document.getElementById("s" + row + (column - 1)).style.background =  "red";
+			 }
+	else {
+			  document.getElementById("s" + row + (column - 1)).style.background = "grey";
+			}
+			  var userInput = $("fireInput").val();
+  }
