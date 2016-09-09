@@ -7,11 +7,13 @@ body {
     width: 70%;
     max-width: 950px;
     text-align: center;
+    background-color: #469;
 }
 
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family:'sans-sarif';
+    color: white;
 }
 
 p, button, input {
@@ -19,6 +21,7 @@ p, button, input {
     line-height: 1.4em;
     color: #333;
 	margin-bottom:1em;
+  font-family: 'sans-serif';
 }
 
 #gameboard {
@@ -41,7 +44,7 @@ p, button, input {
 
 .boardSquare {
   text-align: center;
-  font-family: sans-serif;
+  font-family: 'WECKER Regular';
   line-height: 50px;
 }
 

@@ -69,8 +69,12 @@ var gameBoard = [
  var second;
  var converted;
  var hitHolder = 0;
+ var aFire = new Audio;
+ aFire.src = 'Gunshot.mp3'
+ 	var gameOver;
 
 	function fireTorpedo() {
+		aFire.play();
 		  torpedo = document.getElementById("fireInput").value;
 			  x = torpedo.substring(0, 1);
 			  row = letterConversion[x];
@@ -78,9 +82,25 @@ var gameBoard = [
 
 	if (gameBoard[row][column - 1] == 1){
 			 document.getElementById("s" + row + (column - 1)).style.background =  "red";
+			 hitHolder += 1;
 			 }
 	else {
 			  document.getElementById("s" + row + (column - 1)).style.background = "grey";
 			}
-			  var userInput = $("fireInput").val();
+  if(hitHolder == 17) {
+        console.log(destroyed);
+				$("#your_winner").fadeIn();
+
+				var modal = document.getElementById("your_winner");
+				var span = document.getElementByClassName("close")[0];
+				span.onclick = function() {
+					modal.style.display = "none";
+				}
+
+				window.onclick = function(event) {
+					if(event.target == modal) {
+						modal.style.display = "none";
+					}
+				}
+	    }
   }
