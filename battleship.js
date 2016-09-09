@@ -68,10 +68,11 @@ var gameBoard = [
  var first;
  var second;
  var converted;
- var hitHolder = 0;
+ var hitHolder = 1;
  var aFire = new Audio;
  aFire.src = 'Gunshot.mp3'
- 	var gameOver;
+ var gameOver;
+
 
 	function fireTorpedo() {
 		aFire.play();
@@ -82,12 +83,12 @@ var gameBoard = [
 
 	if (gameBoard[row][column - 1] == 1){
 			 document.getElementById("s" + row + (column - 1)).style.background =  "red";
-			 hitHolder += 1;
+			 hitCounter += 1;
 			 }
 	else {
 			  document.getElementById("s" + row + (column - 1)).style.background = "grey";
 			}
-  if(hitHolder == 17) {
+  if(hitCounter == 17) {
         console.log(destroyed);
 				$("#your_winner").fadeIn();
 
