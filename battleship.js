@@ -70,7 +70,7 @@ var gameBoard = [
  var converted;
  var hitHolder = 1;
  var aFire = new Audio;
- aFire.src = 'Gunshot.mp3'
+ aFire.src = 'Cannon.mp3'
  var gameOver;
 
 
